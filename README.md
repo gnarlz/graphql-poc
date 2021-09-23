@@ -1,6 +1,6 @@
-# graphql-bob
+# graphql-poc
 
-GraphQL POC for < REDACTED >
+GraphQL POC
 
 
 ##
