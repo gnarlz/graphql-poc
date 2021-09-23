@@ -1,0 +1,66 @@
+{
+
+  "reps": [
+    {"id": 1, "name": "John Fahey", "email": "johnfahey@northwesternmutual.com" },
+    {"id": 2, "name": "Jack Rose", "email": "jackrose@northwesternmutual.com" }
+  ],
+
+
+  "bobs": [
+    {"id": 1, "name": "John Fahey's Book Of Business", "repId": 1},
+    {"id": 2, "name": "Jack Roses's Book Of Business", "repId": 2}
+  ],
+
+
+  "households": [
+    {"id": 1, "name": "John Fahey's Book Of Business - Household 1", "income": "$50,000", "bobId": 1 },
+    {"id": 2, "name": "John Fahey's Book Of Business - Household 2", "income": "$120,000", "bobId": 1 },
+    {"id": 3, "name": "Jack Roses's Book Of Business - Household 1", "income": "$210,000", "bobId": 2 },
+    {"id": 4, "name": "Jack Roses's Book Of Business - Household 2", "income": "$430,000", "bobId": 2 }
+  ],
+
+  "clients": [
+    {"id": 1, "name": "John Fahey's Book Of Business - Household 1, Client 1", "nmuniqueid": "ASDFQWER", "householdId": 1},
+    {"id": 2, "name": "John Fahey's Book Of Business - Household 1, Client 2", "nmuniqueid": "FKDSLD8D", "householdId": 1},
+    {"id": 3, "name": "John Fahey's Book Of Business - Household 2, Client 1", "nmuniqueid": "DHD6DKF7", "householdId": 2},
+    {"id": 4, "name": "Jack Roses's Book Of Business - Household 1, Client 1", "nmuniqueid": "DMND904C", "householdId": 3},
+    {"id": 5, "name": "Jack Roses's Book Of Business - Household 2, Client 1", "nmuniqueid": "DHDKF75N", "householdId": 4},
+    {"id": 6, "name": "Jack Roses's Book Of Business - Household 2, Client 2", "nmuniqueid": "LJION9HP", "householdId": 4},
+    {"id": 7, "name": "Jack Roses's Book Of Business - Household 2, Client 3", "nmuniqueid": "4645HFNV", "householdId": 4}
+  ],
+
+  "accounts": [
+    {"id": 1, "name": "John Fahey's Book Of Business - Household 1, Client 1, Account 1", "accountNumber": "A40001603", "clientId": 1},
+    {"id": 2, "name": "John Fahey's Book Of Business - Household 1, Client 2, Account 1", "accountNumber": "A40005316", "clientId": 2},
+    {"id": 3, "name": "John Fahey's Book Of Business - Household 2, Client 1, Account 1", "accountNumber": "A30001555", "clientId": 3},
+    {"id": 4, "name": "John Fahey's Book Of Business - Household 2, Client 1, Account 2", "accountNumber": "A40033456", "clientId": 3},
+  
+    {"id": 5, "name": "Jack Roses's Book Of Business - Household 1, Client 1, Account 1", "accountNumber": "A40004913", "clientId": 4},
+    {"id": 6, "name": "Jack Roses's Book Of Business - Household 1, Client 1, Account 2", "accountNumber": "A40007730", "clientId": 4},
+    {"id": 7, "name": "Jack Roses's Book Of Business - Household 2, Client 1, Account 1", "accountNumber": "A40004482", "clientId": 5},
+    {"id": 8, "name": "Jack Roses's Book Of Business - Household 2, Client 2, Account 1", "accountNumber": "A40008401", "clientId": 6},
+    {"id": 9, "name": "Jack Roses's Book Of Business - Household 2, Client 3, Account 1", "accountNumber": "A40008452", "clientId": 7}
+  ],
+
+  
+  "holdings": [
+    {"id": 1, "ticker": "WAL", "cusip": "ww33546f", "shares": "1300", "fundFamily": "XYZ123", "assetClass": "LARGE CAP", "accountId": 1},
+    {"id": 2, "ticker": "APPL", "cusip": "dhd76f", "shares": "800", "fundFamily": "XYZ456", "assetClass": "LARGE CAP", "accountId": 1},
+    {"id": 3, "ticker": "PDS", "cusip": "xxx554", "shares": "145,980,100", "fundFamily": "ABCNONO", "assetClass": "MID CAP", "accountId": 1},
+    {"id": 4, "ticker": "RIO", "cusip": "sff423", "shares": "903,000", "fundFamily": "TTFT34", "assetClass": "INTERNATIONAL", "accountId": 1},
+    {"id": 5, "ticker": "KIM", "cusip": "77gdf4", "shares": "60,000", "fundFamily": "BBGGHHY", "assetClass": "MID CAP", "accountId": 2},
+    {"id": 6, "ticker": "X", "cusip": "dhd76f", "shares": "123,456,789", "fundFamily": "XYZ456", "assetClass": "SMALL CAP", "accountId": 2},
+    {"id": 7, "ticker": "GE", "cusip": "22dfdf5", "shares": "33,445", "fundFamily": "BBNNHH", "assetClass": "LARGE CAP", "accountId": 3},
+    {"id": 8, "ticker": "SNDK", "cusip": "hh45dr", "shares": "347,900", "fundFamily": "FFDRDS", "assetClass": "LARGE CAP", "accountId": 4},
+    {"id": 9, "ticker": "POT", "cusip": "gfgf665", "shares": "9,000", "fundFamily": "BBVVFFD", "assetClass": "LARGE CAP", "accountId": 4},
+    {"id": 10, "ticker": "XLS", "cusip": "dgfyt6", "shares": "903,000", "fundFamily": "TTFT34", "assetClass": "INTERNATIONAL", "accountId": 4},
+    {"id": 11, "ticker": "RMD", "cusip": "sgdftfh", "shares": "345,999", "fundFamily": "GGHYT7Y", "assetClass": "SMALL CAP", "accountId": 4},
+    {"id": 12, "ticker": "AMZN", "cusip": "lldhf7", "shares": "903,000", "fundFamily": "TTFT34", "assetClass": "LARGE CAP", "accountId": 4},
+  
+    {"id": 13, "ticker": "WTF", "cusip": "xxcdfs", "shares": "10,903,000", "fundFamily": "TTFT34", "assetClass": "LARGE CAP", "accountId": 5},
+    {"id": 14, "ticker": "FFS", "cusip": "asfdtr", "shares": "1,999,903,000", "fundFamily": "TTFT34", "assetClass": "LARGE CAP", "accountId": 5}
+  ]
+
+  
+
+}
