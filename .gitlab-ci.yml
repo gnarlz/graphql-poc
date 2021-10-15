@@ -1,0 +1,47 @@
+stages:
+  - Pre-Build
+  - Test
+  - Build
+  - Post-Build
+  - Publish
+
+include:
+  - project: 'gitlab/gitlabci-template'
+    file: '/pre-build/.pre-build-common-template.yml'
+  - project: 'gitlab/gitlabci-template'
+    file: '/build/.build-docker-common-template.yml'
+  - project: 'IPS/ips-api-team/support/ci-templates'
+    file: 'sonarqube/.code-quality.yml'
+  - project: 'gitlab/gitlabci-template'
+    file: '/post-build/.post-build-common-template.yml'
+  - project: 'IPS/ips-api-team/support/ci-templates'
+    file: 'artifactory/.artifactory-publishing.yml'
+
+Test:
+  stage: Pre-Build
+  image: xxx.yyy.zzz.com:5000/nodejs-db2:rhel8-14.17
+  script:
+    - npm ci
+    - npm test
+  artifacts:
+    paths:
+      - coverage/lcov.info
+    expire_in: 1d
+Build:
+  stage: Build
+  when: always
+  only:
+    - branches
+    - tags
+
+SonarQube:
+  stage: Post-Build
+  # "image" and "script" are taken from include section, override the "only"
+  # Only run on master and release branches
+  only:
+    - /^(master|v[0-9]{1,}\.[0-9]{1,}(\.[0-9]{1,})?)$/
+
+Publish Artifactory:
+  stage: Publish
+  variables:
+    NODE_VERSION: 14
